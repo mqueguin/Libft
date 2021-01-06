@@ -6,7 +6,7 @@
 #    By: mqueguin <mqueguin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/09 23:39:23 by mqueguin          #+#    #+#              #
-#    Updated: 2020/11/12 19:32:10 by mqueguin         ###   ########.fr        #
+#    Updated: 2021/01/06 22:50:45 by mqueguin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,10 @@ SRCS		= 		ft_isalnum.c\
 SRCS_BONUS	=		ft_lstnew.c\
 					ft_lstadd_front.c\
 					ft_lstsize.c\
-					ft_lstlast.c
+					ft_lstlast.c\
+					ft_lstadd_back.c\
+					ft_lstdelone.c\
+					ft_lstclear.c
 
 HEAD		=		libft.h
 
@@ -68,10 +71,10 @@ CFLAGS		= -Wall -Wextra -Werror -I.
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-			ar -rc libft.a ${OBJS}
+			ar rc ${NAME} ${OBJS}
 
-bonus:		${OBJS} ${OBJS_BONUS}
-			ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
+bonus:		${NAME} ${OBJS} ${OBJS_BONUS}
+			ar rc ${NAME} ${OBJS} ${OBJS_BONUS}
 
 all:		${NAME}
 
