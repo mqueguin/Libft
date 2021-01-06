@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-int		is_sep(char pos, char c)
+static int		is_sep(char pos, char c)
 {
 	if (pos == c || pos == '\0')
 		return (1);
 	return (0);
 }
 
-int		count_words(char const *s, char c)
+static int		count_words(char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -42,7 +42,7 @@ int		count_words(char const *s, char c)
 	return (j);
 }
 
-int		count_letters(char const *s, char c, int pos)
+static int		count_letters(char const *s, char c, int pos)
 {
 	int		i;
 
@@ -56,7 +56,7 @@ int		count_letters(char const *s, char c, int pos)
 	return (i);
 }
 
-void	split_str(char **tab, char const *s, char c)
+static void		split_str(char **tab, char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -83,9 +83,9 @@ void	split_str(char **tab, char const *s, char c)
 	}
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-	char	**tab;
+	char		**tab;
 
 	if (!s)
 		return (NULL);

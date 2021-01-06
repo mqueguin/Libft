@@ -1,40 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mqueguin <mqueguin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/09 23:20:38 by mqueguin          #+#    #+#             */
-/*   Updated: 2020/09/09 23:53:28 by mqueguin         ###   ########.fr       */
+/*   Created: 2021/01/06 16:39:59 by mqueguin          #+#    #+#             */
+/*   Updated: 2021/01/06 17:14:32 by mqueguin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcat(char *dst, const char *src, size_t n)
+void ft_lstadd_back(t_list **alst, t_list *new)
 {
-	size_t	i;
-	size_t	j;
-	size_t	res;
-
-	i = 0;
-	j = 0;
-	res = 0;
-	while (dst[i])
-		i++;
-	while (src[res])
-		res++;
-	if (n <= i)
-		res += n;
-	else
-		res += i;
-	while (src[j] && (i + 1) < n)
-	{
-		dst[i] = src[j];
-		i++;
-		j++;
-	}
-	dst[i] = '\0';
-	return (res);
+	
 }
