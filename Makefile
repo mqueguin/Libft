@@ -6,7 +6,7 @@
 #    By: mqueguin <mqueguin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/09 23:39:23 by mqueguin          #+#    #+#              #
-#    Updated: 2021/01/06 22:50:45 by mqueguin         ###   ########.fr        #
+#    Updated: 2021/01/07 14:16:14 by mqueguin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,9 @@ SRCS_BONUS	=		ft_lstnew.c\
 					ft_lstlast.c\
 					ft_lstadd_back.c\
 					ft_lstdelone.c\
-					ft_lstclear.c
+					ft_lstclear.c\
+					ft_lstiter.c\
+					ft_lstmap.c
 
 HEAD		=		libft.h
 

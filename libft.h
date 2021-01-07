@@ -6,7 +6,7 @@
 /*   By: mqueguin <mqueguin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 23:26:41 by mqueguin          #+#    #+#             */
-/*   Updated: 2021/01/06 22:51:32 by mqueguin         ###   ########.fr       */
+/*   Updated: 2021/01/07 14:22:41 by mqueguin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 typedef	struct	s_list
 {
@@ -67,5 +68,7 @@ t_list			*ft_lstlast(t_list *lst);
 void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
