@@ -6,7 +6,7 @@
 #    By: mqueguin <mqueguin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/09 23:39:23 by mqueguin          #+#    #+#              #
-#    Updated: 2021/01/07 14:16:14 by mqueguin         ###   ########.fr        #
+#    Updated: 2021/01/08 16:24:14 by mqueguin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ CFLAGS		= -Wall -Wextra -Werror -I.
 .c.o:
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}:	${OBJS}
+$(NAME):	${OBJS}
 			ar rc ${NAME} ${OBJS}
 
 bonus:		${NAME} ${OBJS} ${OBJS_BONUS}
